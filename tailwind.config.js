@@ -5,8 +5,7 @@ export default {
     extend: {},
   },
   plugins: [
-    tailwindcss: {},
-    autoprefixer: {},
+    
   ],
 }
 
