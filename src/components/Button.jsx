@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Button = ({ mode, label }) => {
+export const Button = ({ mode, label, onClick }) => {
   let baseClassNames = [
     "py-0", "px-3",
     "rounded-sm",
@@ -36,7 +36,7 @@ export const Button = ({ mode, label }) => {
 
 
   return (
-    <button type="button" className={baseClassNames.join(' ')}>
+    <button type="button" className={baseClassNames.join(' ')} onClick={onClick}>
       {label}
     </button>
   );

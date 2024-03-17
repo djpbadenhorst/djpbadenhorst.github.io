@@ -1,3 +1,25 @@
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { Other } from './pages/Other';
+
+const router = createBrowserRouter([
+  { path: "/", element: <Home/> },
+  { path: "/other", element: <Other/> },
+]);
+
+function App({routes}) {
+
+  return (
+    <>
+      <RouterProvider router={router}/>
+    </>
+  );
+}
+
+export default App;
+
+/*
 import { useCookies } from 'react-cookie';
 import crypto from 'crypto';
 
@@ -24,6 +46,7 @@ function App() {
 }
 
 export default App;
+*/
 /*
         {cookies.loggedIn ? (
         <button type="button" className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" onClick={logout}>
