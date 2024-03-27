@@ -10,6 +10,7 @@ export const AdminHomePage = ({ }) => {
             { label:"Kodi", link:"http://desktop.local:10000"},
             { label:"QBitTorrent", link:"http://desktop.local:9000"},
             { label:"Jackett", link:"http://desktop.local:9117"},
+            { label:"Mainsail", link:"http://3dprinter.local"},
           ].map(x=>(
             <div className="w-full sm:w-full md:w-1/2 lg:w-1/3 shrink-0">
               <Container className="m-5 h-20">
