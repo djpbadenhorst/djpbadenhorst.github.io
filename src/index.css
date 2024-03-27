@@ -3,10 +3,33 @@
 @tailwind utilities;
 
 body {
-  background-image: url('./assets/background.jpg');
+    background-image: url('./assets/background.jpg');
+}
+
+@layer base {
+    @font-face {
+	font-family: 'monosphere';
+	src: url('./assets/fonts/monosphere.ttf') format("truetype");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+    }
+    h1 {
+	@apply text-4xl font-monosphere font-bold;
+    }
+    h2 {
+	@apply text-3xl font-monosphere font-bold;
+    }
+    h3 {
+	@apply text-2xl font-monosphere font-bold;
+    }
+    h4 {
+	@apply text-xl font-monosphere font-bold;
+    }
 }
 
 /*
+ style="min-height: 100vh;"
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -32,13 +55,8 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
 button {
   border-radius: 8px;

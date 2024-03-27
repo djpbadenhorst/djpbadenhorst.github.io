@@ -1,79 +1,23 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { Other } from './pages/Other';
 
-const router = createBrowserRouter([
-  { path: "/", element: <Home/> },
-  { path: "/other", element: <Other/> },
-]);
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useCookies } from 'react-cookie';
+
+import { HomePage } from './pages/HomePage';
+import { LoginPage } from './pages/LoginPage';
+import { AdminHomePage } from './pages/AdminHomePage';
 
 function App({routes}) {
-
-  return (
-    <>
-      <RouterProvider router={router}/>
-    </>
-  );
-}
-
-export default App;
-
-/*
-import { useCookies } from 'react-cookie';
-import crypto from 'crypto';
-
-import { Container } from './components/Container';
-
-function App() {
   const [cookies, setCookies] = useCookies(['loggedIn']);
-  const auth = () => {
-    console.log('HERE');
-    //if (crypto.createHash('md5').update('password').digest('hex') == '07d5463afe615a43d9b9eab6e57dc563')
-    //  setCookies('loggedIn',true);
-    setCookies('loggedIn',true);
-  };
-  const logout = () => {
-    setCookies('loggedIn',false);
-  };
+  console.log(cookies.loggedIn);
   return (
-    <>
-      <div className="flex flex-row w-screen h-screen justify-center items-center">
-        <Container className="basis-1/4 h-1/2"/>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/admin/login" element={<LoginPage setCookies={setCookies}/>}/>
+        <Route path="/admin/home" element={cookies.loggedIn==true ? <AdminHomePage/> : <Navigate to="/admin/login"/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;
-*/
-/*
-        {cookies.loggedIn ? (
-        <button type="button" className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" onClick={logout}>
-          Log Out
-        </button>
-      ) : (
-        <button type="button" className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" onClick={auth}>
-          Log In
-        </button>
-        )}
-
-        
-
-            <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        <button type="button" className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" onClick={auth}>
-          Not Logged In
-        </button>
-        </form>
-      <div>
-
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </div>
-*/

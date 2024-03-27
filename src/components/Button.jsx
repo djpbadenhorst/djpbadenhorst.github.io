@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Button = ({ mode, label, onClick }) => {
+export const Button = ({ mode, label, className, onClick }) => {
   let baseClassNames = [
     "py-0", "px-3",
     "rounded-sm",
@@ -11,6 +11,7 @@ export const Button = ({ mode, label, onClick }) => {
     "transform",
     "active:scale-90",
     "transition-transform",
+    ...(className || '').split(',')
   ];
 
   switch (mode || 'primary') {
@@ -45,6 +46,7 @@ export const Button = ({ mode, label, onClick }) => {
 Button.propTypes = {
   mode: PropTypes.oneOf(['primary', 'secondary', 'accent']),
   label: PropTypes.string.isRequired,
+  className: PropTypes.string
 };
 
 Button.defaultProps = {

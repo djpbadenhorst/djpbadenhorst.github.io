@@ -8,6 +8,6 @@ export default {
   argTypes: {},
 };
 
-export const Neutral = {
-  args: {  },
+export const Base = {
+  args: { },
 };

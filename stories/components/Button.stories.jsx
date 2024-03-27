@@ -9,11 +9,11 @@ export default {
 };
 
 export const Default = {
-  args: { label: "Default" },
+  args: { label: "Default", className:"w-40" },
 };
 export const Secondary = {
-  args: { label: "Secondary", mode: 'secondary' },
+  args: { mode: 'secondary', label: "Secondary", className:"w-40" },
 };
 export const Accent = {
-  args: { label: "Accent", mode: 'accent' },
+  args: { mode: 'accent', label: "Accent", className:"w-40" },
 };

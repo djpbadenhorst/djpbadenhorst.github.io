@@ -9,9 +9,9 @@ export default {
 };
 
 export const Text = {
-  args: { type: 'text', placeholder: "Placeholder Here" },
+  args: { type: 'text', label: "Email" },
 };
 
 export const Password = {
-  args: { type: 'password', placeholder: "Password Here" },
+  args: { type: 'password', label: "Password" },
 };

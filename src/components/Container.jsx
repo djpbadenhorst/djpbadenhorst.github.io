@@ -5,10 +5,10 @@ export const Container = ({ className, children }) => {
   const baseClassNames = [
     "min-w-10",
     "min-h-10",
-    "bg-grayscale-50",
-    "rounded-sm",
+    "bg-black",
+    "rounded-lg",
     "border-4",
-    "border-double",
+    "border-primary-80",
     "border-black",
   ];
   return (
@@ -18,9 +18,7 @@ export const Container = ({ className, children }) => {
   );
 };
 
-Container.propTypes = {
-};
+Container.propTypes = { };
 
-Container.defaultProps = {
-};
+Container.defaultProps = { };
 
