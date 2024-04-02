@@ -16,7 +16,7 @@ export const HomePage = ({ }) => {
         </div>
       </Container>
       <Container className="fixed top-2 right-2 hover:bg-grayscale-50 transform active:scale-90 transition-transform">
-        <a href="http://192.168.68.100">
+        <a href="http://100.109.163.106">
           <HiOutlineKey className="p-1 stroke-primary-50 text-3xl"/>
         </a>
       </Container>
