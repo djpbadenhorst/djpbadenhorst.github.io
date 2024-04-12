@@ -8,9 +8,7 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-	monosphere : ['monosphere'],
-      },
+      fontFamily: { monosphere : ['monosphere'] },
       colors: customColors
     }
   },
