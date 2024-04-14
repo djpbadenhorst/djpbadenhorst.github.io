@@ -23,12 +23,17 @@ export const HomePage = ({ }) => {
     <div className="h-screen flex justify-center content-center">
       <Container className="m-auto w-1/2">
         <div className="flex justify-center">
-          <Header className="pt-6 pb-2 text-primary-50 underline">Dirk Badenhorst</Header>
+          <Header className="pt-6 pb-2 text-primary-50 underline">DJPBadenhorst</Header>
         </div>
         <div className="flex justify-center">
-          <p className="px-4 pt-4 pb-2 text-white text-center font-monosphere">
-            Will be putting some stuff here for public profile.
-          </p>
+          <div>
+            <p className="px-4 pt-4 pb-2 text-white text-center font-monosphere">
+              Placeholder for future public profile.
+            </p>
+            <p className="px-4 pt-4 pb-2 text-white text-center font-monosphere">
+              For setup repo: <br/> https://github.com/djpbadenhorst/setup.git
+            </p>
+          </div>
         </div>
       </Container>
       <Container className="fixed top-2 right-2 hover:bg-grayscale-50 transform active:scale-90 transition-transform">
@@ -39,3 +44,4 @@ export const HomePage = ({ }) => {
     </div>
   );
 };
+//
