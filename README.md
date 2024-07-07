@@ -18,7 +18,3 @@ To deploy to github pages, run the following:
 npm run build
 npm run deploy
 ```
-
-## TODO 
-include instructions to link
-https://github.com/djpbadenhorst/setup.git
