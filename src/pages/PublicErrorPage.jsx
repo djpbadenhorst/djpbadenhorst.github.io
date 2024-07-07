@@ -3,7 +3,7 @@ import { Header } from 'd4design';
 import { Container } from 'd4design';
 import { HiOutlineKey } from "react-icons/hi";
 
-export const HomePage = ({ }) => {
+export const PublicErrorPage = ({ }) => {
   const [url, setUrl] = useState(null);
   useEffect(() => {
     async function getUrl() {      
@@ -34,13 +34,13 @@ export const HomePage = ({ }) => {
       <Container className="m-auto w-1/2">
         
         <div className="flex justify-center">
-          <Header className="pt-6 pb-2 text-primary-50 underline">Dirk Badenhorst</Header>
+          <Header className="pt-6 pb-2 text-primary-50 underline">Error</Header>
         </div>
         
         <div className="flex justify-center">
           <div>
             <p className="px-4 pt-4 pb-2 text-white text-center font-monosphere">
-              A digital solutions provider.
+              This is only intended for personal use.
             </p>
           </div>
         </div>
