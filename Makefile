@@ -1,8 +1,8 @@
 install:
 	bash ./scripts/install.sh
-stories:
-	bash ./scripts/stories.sh
-build:
-	bash ./scripts/build.sh
+run:
+	bash ./scripts/run.sh
+deploy:
+	bash ./scripts/deploy.sh
 help:
 	bash ./scripts/help.sh
