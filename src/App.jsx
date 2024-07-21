@@ -1,17 +1,15 @@
 import { HomePage } from './pages/HomePage';
 import { PublicErrorPage } from './pages/PublicErrorPage';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 function App({routes}) {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="error" element={<PublicErrorPage/>} />
+        <Route path="/error" element={<PublicErrorPage/>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
-  //    <HomePage/>
 }
 export default App;
