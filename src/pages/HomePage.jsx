@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Header } from 'd4design';
 import { Container } from 'd4design';
 import { HiOutlineKey } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export const HomePage = ({ }) => {
   const [url, setUrl] = useState(null);
@@ -33,9 +34,9 @@ export const HomePage = ({ }) => {
     <div className="h-screen content-center">
       
       <Container className="fixed top-2 right-2 hover:bg-grayscale-50 transform active:scale-90 transition-transform">
-        <a href={url}>
+        <Link to={url}>
           <HiOutlineKey className="p-1 stroke-primary-50 text-3xl"/>
-        </a>
+        </Link>
       </Container>
       
       <Container className="m-auto w-1/2">

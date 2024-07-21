@@ -4,7 +4,6 @@ import { Container } from 'd4design';
 import { HiOutlineKey } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-
 export const ErrorPage = ({ }) => {
   const [url, setUrl] = useState(null);
   useEffect(() => {
@@ -28,7 +27,7 @@ export const ErrorPage = ({ }) => {
     <div className="h-screen content-center">
       
       <Container className="fixed top-2 right-2 hover:bg-grayscale-50 transform active:scale-90 transition-transform">
-        <Link to={url}>Home
+        <Link to={url}>
           <HiOutlineKey className="p-1 stroke-primary-50 text-3xl"/>
         </Link>
       </Container>
@@ -42,7 +41,9 @@ export const ErrorPage = ({ }) => {
         <div className="flex justify-center">
           <div>
             <p className="px-4 pt-4 pb-2 text-white text-center font-monosphere">
-              This is only intended for personal use.
+              Please connect to VPN to access secure content. <br/><br/>
+              Alternatively, consult the repo <br/>
+              https://github.com/djpbadenhorst/setup.git
             </p>
           </div>
         </div>
