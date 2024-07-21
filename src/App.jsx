@@ -1,15 +1,13 @@
 import { HomePage } from './pages/HomePage';
-import { PublicErrorPage } from './pages/PublicErrorPage';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { ErrorPage } from './pages/ErrorPage';
+import { Routes, Route } from 'react-router-dom';
 
-function App({routes}) {
+const App = () => {
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/error" element={<PublicErrorPage/>} />
-      </Routes>
-    </HashRouter>
+    <Routes>
+      <Route exact path="/" element={<HomePage/>} />
+      <Route path="/error" element={<ErrorPage/>} />
+    </Routes>
   );
-}
+};
 export default App;
