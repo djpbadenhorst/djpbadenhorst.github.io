@@ -8,23 +8,22 @@ export const HomePage = ({ }) => {
   const [url, setUrl] = useState(null);
   useEffect(() => {
     async function getUrl() {      
-      //let url = await fetch('https://desktop.local', {mode: 'no-cors'})
-      //    .then(response => 'https://desktop.local').catch(err=>{
-      //      console.log('1');
-      //      console.log(err);
-      //      return fetch('https://192.168.68.122', {mode: 'no-cors'})
-      //        .then(response => 'https://192.168.68.122').catch(err=>{
-      //          console.log('2');
-      //          console.log(err);
-      //          return fetch('https://100.109.163.106', {mode: 'no-cors'})
-      //            .then(response => 'https://100.109.163.106').catch(err=>{
-      //              console.log('3');
-      //              console.log(err);
-      //              return '/error';
-      //            });
-      //        });
-      //    });
-      let url = '/error';
+      let url = await fetch('https://desktop.local', {mode: 'no-cors'})
+          .then(response => 'https://desktop.local').catch(err=>{
+            console.log('1');
+            console.log(err);
+            return fetch('https://192.168.68.122', {mode: 'no-cors'})
+              .then(response => 'https://192.168.68.122').catch(err=>{
+                console.log('2');
+                console.log(err);
+                return fetch('https://100.109.163.106', {mode: 'no-cors'})
+                  .then(response => 'https://100.109.163.106').catch(err=>{
+                    console.log('3');
+                    console.log(err);
+                    return '/error';
+                  });
+              });
+          });
       setUrl(url);
     }
     getUrl();
@@ -48,7 +47,7 @@ export const HomePage = ({ }) => {
         <div className="flex justify-center">
           <div>
             <p className="px-4 pt-4 pb-2 text-white text-center font-monosphere">
-              A digital solutions provider. 1
+              A digital solutions provider.
             </p>
           </div>
         </div>
