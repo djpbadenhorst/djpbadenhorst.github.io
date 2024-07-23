@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Header } from 'd4design';
 import { Container } from 'd4design';
 import { HiOutlineKey } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link } from "../utils/Link";
 
 export const HomePage = ({ }) => {
   const [url, setUrl] = useState(null);
@@ -20,7 +20,7 @@ export const HomePage = ({ }) => {
       //            .then(response => 'http://100.109.163.106:80').catch(err=>{
       //              console.log('3');
       //              console.log(err);
-      //              return 'https://djpbadenhorst.github.io/error';
+      //              return '/error';
       //            });
       //        });
       //    });
@@ -29,7 +29,7 @@ export const HomePage = ({ }) => {
     }
     getUrl();
   }, []);
-  
+
   return (
     <div className="h-screen content-center">
       
@@ -48,7 +48,7 @@ export const HomePage = ({ }) => {
         <div className="flex justify-center">
           <div>
             <p className="px-4 pt-4 pb-2 text-white text-center font-monosphere">
-              A digital solutions provider.
+              A digital solutions provider. 
             </p>
           </div>
         </div>

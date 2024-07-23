@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Header } from 'd4design';
 import { Container } from 'd4design';
 import { HiOutlineKey } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link } from "../utils/Link";
 
 export const ErrorPage = ({ }) => {
   const [url, setUrl] = useState(null);
@@ -10,11 +10,17 @@ export const ErrorPage = ({ }) => {
     async function getUrl() {      
       let url = await fetch('http://desktop.local:80', {mode: 'no-cors'})
           .then(response => 'http://desktop.local:80').catch(err=>{
+            console.log('1');
+            console.log(err);
             return fetch('http://192.168.68.122:80', {mode: 'no-cors'})
               .then(response => 'http://192.168.68.122:80').catch(err=>{
+                console.log('2');
+                console.log(err);
                 return fetch('http://100.109.163.106:80', {mode: 'no-cors'})
-                  .then(response => 'http://100.109.163.106:80').catch(err=>{                
-                    return 'https://djpbadenhorst.github.io/error';
+                  .then(response => 'http://100.109.163.106:80').catch(err=>{
+                    console.log('3');
+                    console.log(err);
+                    return '/error';
                   });
               });
           });
