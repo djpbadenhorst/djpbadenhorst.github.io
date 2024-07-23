@@ -8,16 +8,16 @@ export const HomePage = ({ }) => {
   const [url, setUrl] = useState(null);
   useEffect(() => {
     async function getUrl() {      
-      //let url = await fetch('http://desktop.local:80', {mode: 'no-cors'})
-      //    .then(response => 'http://desktop.local:80').catch(err=>{
+      //let url = await fetch('https://desktop.local:80', {mode: 'no-cors'})
+      //    .then(response => 'https://desktop.local:80').catch(err=>{
       //      console.log('1');
       //      console.log(err);
-      //      return fetch('http://192.168.68.122:80', {mode: 'no-cors'})
-      //        .then(response => 'http://192.168.68.122:80').catch(err=>{
+      //      return fetch('https://192.168.68.122:80', {mode: 'no-cors'})
+      //        .then(response => 'https://192.168.68.122:80').catch(err=>{
       //          console.log('2');
       //          console.log(err);
-      //          return fetch('http://100.109.163.106:80', {mode: 'no-cors'})
-      //            .then(response => 'http://100.109.163.106:80').catch(err=>{
+      //          return fetch('https://100.109.163.106:80', {mode: 'no-cors'})
+      //            .then(response => 'https://100.109.163.106:80').catch(err=>{
       //              console.log('3');
       //              console.log(err);
       //              return '/error';

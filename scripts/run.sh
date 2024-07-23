@@ -1,2 +1,2 @@
-bash ./scripts/install.sh
+bash ./install.sh
 npm run dev
