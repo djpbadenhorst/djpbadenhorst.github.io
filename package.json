@@ -12,6 +12,7 @@
     "crypto-js": "^4.2.0",
     "d4design": "github:djpbadenhorst/react-d4design",
     "is-internal-link": "^1.1.4",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
