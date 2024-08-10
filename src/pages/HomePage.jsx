@@ -41,7 +41,7 @@ export const HomePage = ({ }) => {
         <div className="flex justify-center">
           <div>
             <p className="px-4 pt-4 pb-2 text-white text-center font-monosphere">
-              A digital solutions provider.
+              A digital solutions provider with ai expertise.
             </p>
           </div>
         </div>
